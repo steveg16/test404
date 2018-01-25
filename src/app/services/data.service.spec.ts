@@ -14,4 +14,9 @@ describe('DataService', () => {
   it('should be created', inject([DataService], (service: DataService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should have a getData() method', inject([DataService], (service: DataService) => {
+    expect(service.getData).toBeDefined();
+    expect(typeof service.getData).toBe('function');
+  }));
 });
